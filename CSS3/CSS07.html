@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div,
+        img {
+            width: 350px;
+            padding: 10px;
+            border: 5px solid gray;
+            margin: 0;
+        }
+    </style>
+    <script>
+        function show(element) {
+            document.getElementById(element).style.display = 'block';
+
+        }
+
+        function hide(element) {
+            document.getElementById(element).style.display = 'none';
+
+        }
+
+        function inLine(element) {
+            document.getElementById(element).style.display = 'inline';
+
+        }
+    </script>
+</head>
+
+<body>
+    New text
+    <img id="img1" src="images/funny.jpg" width="242" height="208" alt="faceebook and students"> any text here for testing....
+    <div id="div1">The picture above is 242px wide. </div>
+
+    <button onclick="show('img1');"> Show image block</button>
+    <button onclick="hide('img1');"> Hide image </button>
+    <button onclick="inLine('img1');"> Show image inline</button>
+
+</body>
+
+</html>

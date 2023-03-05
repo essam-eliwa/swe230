@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            border: 3px solid #8AC007;
+            padding: 20px;
+        }
+
+        div.relative {
+            position: relative;
+            width: 700px;
+            height: 600px;
+            top: 0px;
+            left: 0px;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: -10px;
+            left: 50px;
+
+            width: 200px;
+            height: 100px;
+        }
+
+        div.fixed {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 500px;
+        }
+
+        img {
+            float: right;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>position: </h2>
+
+    <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+
+    <div class="relative">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+    </div>
+
+    <div class="fixed">This div element has position: fixed;</div>
+
+
+    <p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+    <div class="relative">
+        <p><img src="images/images.png" alt="css"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+    </div>
+</body>
+
+</html>

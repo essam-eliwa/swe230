@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Example Page</title>
+    <style type="text/css">
+        body {
+            font: "Myriad Pro", "Myriad Web", "Lucida Grande", "Trebuchet MS", "Tahoma", "Helvetica", "Arial", sans-serif;
+            color: #eaeaea;
+            margin: 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            background-color: #444;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav li {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2em;
+            line-height: 40px;
+            height: 40px;
+            border-bottom: 1px solid #888;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            transition: .3s background-color;
+        }
+        
+        nav a:hover {
+            background-color: #005f5f;
+        }
+        
+        nav a.active {
+            background-color: #fff;
+            color: #444;
+            cursor: default;
+        }
+        
+        nav li {
+            width: 120px;
+            border-bottom: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+        }
+        /* Option 1 - Display Inline */
+        
+        nav li {
+            display: inline-block;
+            margin-right: -4px;
+        }
+        
+        .box {
+            display: inline-block;
+            width: 250px;
+            background: #89ac11 url(top-left.gif) left top no-repeat;
+            padding: 10px;
+            margin: 20px;
+        }
+        
+        h1 {
+            margin-top: 0;
+        }
+        /* Example */
+        
+        .box {
+            background-image: url(top-left.gif), url(top-right.gif), url(bottom-left.gif), url(bottom-right.gif);
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            background-position: top left, top right, bottom left, bottom right;
+        }
+        
+        main {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul>
+                    <li class="home"><a href="#">Home</a></li>
+                    <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
+                    <li class="about"><a href="#">About</a></li>
+                    <li class="news"><a href="#">Newsletter</a></li>
+                    <li class="contact"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <h1>Header text</h1>
+            <p>content..</p>
+        </div>
+
+        <div class="box">
+            <h1>Header text</h1>
+            <p>content..</p>
+        </div>
+
+        <div class="box">
+            <h1>Header text</h1>
+            <p>content..</p>
+        </div>
+    </main>
+
+    <footer>
+        <section id="footer">
+            <div class="first">
+                <h4>About</h4>
+                <a href="/">siteInspire</a> is a showcase of the finest web and interactive design.
+            </div>
+            <div class="latest">
+                <h4>Latest Websites</h4>
+                <ul>
+                    <li><a href="/websites/5934-or-type">Or Type</a></li>
+                    <li><a href="/websites/5732-foundwell">Foundwell </a></li>
+                    <li><a href="/websites/5862-kodebyraaet">Kodebyraaet</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="http://eepurl.com/dUwy9">Mailing List</a></li>
+                    <li><a href="/advertise">Advertise</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <h4>Connect with Us</h4>
+                <ul>
+                    <li><a href="http://twitter.com/siteinspire" class="twitter"><span>Twitter</span></a></li>
+                    <li><a href="http://facebook.com/siteinspire" class="facebook"><span>Facebook</span></a></li>
+                    <li><a href="http://pinterest.com/siteinspire" class="pinterest"><span>Pinterest</span></a></li>
+                    <li><a href="http://siteinspire.tumblr.com/" class="tumblr"><span>Tumblr</span></a></li>
+                    <li><a href="http://feeds2.feedburner.com/Siteinspire" class="rss"><span>RSS</span></a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#375a565e5b77445e43525e5944475e45521954585a" class="email"><span>Email</span></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                Copyright &copy; 2015 <a href="http://howellsstudio.com">Howells—Studio</a> All screenshots &copy; of their respective owners.
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+</html>

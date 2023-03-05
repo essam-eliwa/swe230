@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h2 {
+            position: relative;
+            top: 40px;
+            left: 0px;
+        }
+
+        div {
+            border: 3px solid #8AC007;
+        }
+
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 1000px;
+            top: 0px;
+            left: 0px;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 10px;
+            left: 300px;
+            width: 200px;
+            height: 100px;
+        }
+
+        div.fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>position: </h2>
+
+    <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+
+    <div class="relative">
+        This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+    </div>
+
+    <div class="fixed">This div element has position: absolute;</div>
+
+</body>
+
+</html>
