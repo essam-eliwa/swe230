@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>JavaScript Lecture</title>
+    <meta name="description" content="HTML5 and JS">
+    <meta name="author" content="eoe">
+
+</head>
+
+<body>
+    <!--The <script> Tag-->
+    <h1> Hello</h1>
+    <div id="demo"></div>
+    <script>
+        function add(x, y) {
+            return x + y;
+        }
+        console.log(add(5, 7));
+        //alert("test: " + add(1, 2));
+        document.getElementById("demo").innerHTML = add(5, 7);
+    </script>
+    <p> world</p>
+</body>
+</html>

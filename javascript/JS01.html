@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>JavaScript Lecture 5</title>
+    <meta name="description" content="HTML5 and JS">
+    <meta name="author" content="eoe">
+
+    <style>
+        #demo {
+            border: 1px solid black;
+            padding: 10px;
+            width: 300px;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+    <script src="js/js01.js"></script>
+
+</head>
+
+<body>
+
+    <h1 id="demo"> Old Text </h1>
+
+    <script>
+        let students = ['Zyad', 'Eman', document.getElementsByTagName("h1")[0].innerText];
+
+console.log("Length of original students array: " + students.length); 
+students.push('Salem'); 
+
+    </script>
+
+    <p class="blue"> style blue Text </p>
+    <script>
+        document.getElementById("demo").innerHTML = "My First <b>JavaScript</b> Code";
+    </script>
+
+    <button type="button" onclick="myFunction();">Change text</button>
+    <button type="button" onclick="document.getElementById('demo').style.border='2px solid red'">Change style</button>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML='Old Text'; document.getElementById('demo').style.border='1px solid black'">reset</button>
+    <!--The <script> Tag-->
+
+
+</body>
+</html>

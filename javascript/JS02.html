@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>JavaScript Lecture 5</title>
+    <meta name="description" content="HTML5 and JS">
+    <meta name="author" content="eoe">
+
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+    <script src="js/js01.js"></script>
+</head>
+
+<body>
+    <div id="demo"> </div>
+    <button type="button" onclick="myFunction();">Change text</button>
+    <button type="button" onclick="window.location.reload();">Refresh</button>
+    <!--The <script> Tag-->
+    <script>
+        var flag = true;
+        var number = 1;
+        var text = "Welcome to JavaScript";
+        var tagStart = "<h";
+        var tagClose = ">";
+        var endTag = "</h";
+
+        document.getElementById("demo").innerHTML += "<p> Date is:" + Date() + "</p>";
+
+        do {
+            document.getElementById("demo").innerHTML += tagStart + number + tagClose + text + endTag + number + endTag;
+            number += 1;
+            if (number > 6) flag = false;
+        } while (flag)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>JavaScript Lecture</title>
+    <meta name="description" content="HTML5 and JS">
+    <meta name="author" content="eoe">
+
+    <style>
+        #demo {
+            border: 1px solid black;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--The <script> Tag-->
+
+    <h1 id="demo"> Old Text </h1>
+    <button type="button" onclick="elem.innerHTML= person.firstName">Change text</button>
+
+    <script>
+        var length = 16; // Number
+        var lastName = "Johnson"; // String
+        var cars = ["Saab", "Volvo", "BMW"]; // Array
+        var person = {
+            firstName: "John",
+            lastName: "Doe"
+        }; // Object
+        var flag = true; // boolean
+
+        var elem = document.getElementById("demo");
+    </script>
+
+</body>
+</html>

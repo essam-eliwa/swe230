@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JavaScript Lecture 5</title>
+    <meta name="description" content="HTML5 and JS">
+    <meta name="author" content="eoe">
+
+
+    <script>
+        var QueryString = function () {
+            // This function is anonymous, is executed immediately and 
+            // the return value is assigned to QueryString!
+            var query_string = {};
+            var query = window.location.search.substring(1);
+            alert(query);
+            var var_srray = query.split("&");
+            console.log(var_srray);
+            for (var i = 0; i < var_srray.length; i++) {
+                var pair = var_srray[i].split("=");
+                // If first entry with this name
+                if (typeof query_string[pair[0]] === "undefined") {
+                    query_string[pair[0]] = decodeURIComponent(pair[1]);
+                    console.log('branch 1');
+                    console.log(query_string);
+                    
+                } else if (typeof query_string[pair[0]] === "string") {
+                    var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
+                    query_string[pair[0]] = arr;
+                    console.log('branch 2');
+                    
+                } else {
+                    query_string[pair[0]].push(decodeURIComponent(pair[1]));
+                    console.log('branch 3');
+                }
+            }
+            return query_string;
+        }();
+    </script>
+</head>
+
+<body>
+
+    <div id="demo"> </div>
+    <form name="testForm" action="JS03.html" method="get" onsubmit="return matchpass()">
+        Password:
+        <input type="password" name="password1" id="password1" />
+        <br />
+        <br /> Re-enter Password:
+        <input type="password" name="password2" id="password2" />
+        <br />
+        <input type="submit">
+
+        <script type="text/javascript">
+            document.getElementById("demo").innerHTML = "submitted value: " + QueryString.password1
+
+            function matchpass() {
+                var firstpassword = document.testForm.password1.value;
+                var secondpassword = document.testForm.password2.value;
+                var ret = false;
+                if (firstpassword == secondpassword) {
+                    if (firstpassword.length > 3) {
+                        ret = true;
+                    } else {
+                        alert("password must be over 4 characters!");
+                    }
+
+                } else {
+                    alert("password must be same!");
+                }
+                return ret;
+            }
+        </script>
+    </form>
+</body>
+
+</html>

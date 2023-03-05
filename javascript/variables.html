@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JavaScript Lecture</title>
+    <meta name="description" content="HTML5 and JS">
+    <meta name="author" content="eoe">
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var GLOBAL_X = "xyz";
+
+        function fun() {
+            var cost = 120,
+                profit = 77;
+            GLOBAL_X = "test";
+        }
+    </script>
+
+
+    <script>
+        console.log("GLOBAL_X:" + GLOBAL_X);
+        //console.log("cost:" + cost);
+
+        /*
+        The difference is scoping. var is scoped to the nearest function block and let is scoped to the nearest enclosing block, which can be smaller than a function block. Both are global if outside any block.
+        */
+        const x = 6;
+
+        function fun() {
+            if (x > 1) {
+                let m = "Using Let";
+                var v = "Using Var";
+                y = "no var or let used";
+            }
+
+            console.log("inside fun x = " + x);
+            console.log("inside fun y = " + window.y);
+            console.log("inside fun v = " + v);
+            // console.log("inside fun m = " + m); //Uncaught ReferenceError: m is not defined
+        }
+        fun();
+        console.log("outside fun x = " + x);
+        console.log("outside fun y = " + window.y);
+        // console.log("outside fun v = " + v); //Uncaught ReferenceError: v is not defined
+        // console.log("outside fun m = " + m);
+    </script>
+
+
+
+</body>
+
+</html>
