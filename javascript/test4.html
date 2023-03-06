@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="out"></div>
+    <script>
+      "use strict";
+      var num = 'a';
+      var numObject = [10, 15, 20];
+
+      function increase(_num, _numObject) {
+        _num = 'b';
+        _numObject = [10, 15, 20];
+        _numObject[0]++;
+
+        console.log(
+          "_num is " + _num + ", and _numObject[0] is " + _numObject[0]
+        );
+      }
+      increase(num, numObject);
+      console.log("num is " + num + ", and numObject[0] is " + numObject[0]);
+    </script>
+
+    <div id="sdfs"></div>
+    <div id="asda"></div>
+  </body>
+</html>
