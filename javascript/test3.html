@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="out">
+
+    </div>
+    <script>
+        'use strict';
+        var x = 5;
+        let y = '5';
+        
+        function write(){
+            let z3 = 300;
+            var infun = true;
+            if(infun){
+                var z1 = '100';
+                let z2 = '200';
+                //document.getElementById('out').innerHTML = z1 + ' ' + z2;
+                //document.getElementById('out').innerHTML += '<br>'
+            }
+            document.getElementById('out').innerHTML = z1 ;
+                document.getElementById('out').innerHTML += '<br>'
+
+            document.getElementById('out').innerHTML += x + ' ' + typeof x;
+            document.getElementById('out').innerHTML += '<br>'
+            document.getElementById('out').innerHTML += y + ' ' + typeof y;
+            document.getElementById('out').innerHTML += '<br>'
+            document.getElementById('out').innerHTML += infun + ' ' + typeof infun;
+            return z3;
+        }
+        document.getElementById('out').innerHTML += '<br>'
+        //document.getElementById('out').innerHTML += infun + ' ' + typeof infun;
+        //write();
+        document.getElementById('out').innerHTML += '<hr>';
+        document.getElementById('out').innerHTML += write() ;
+
+        console.log(x);
+    </script>
+  </body>
+</html>

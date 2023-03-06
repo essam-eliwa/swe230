@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="out">
+      <strong>Output: </strong>
+      <hr />
+    </div>
+
+    <script>
+    'use strict';
+      const x = 6; //similar to C or C++'s `const`
+      function fun() {
+        if (x > 1) {
+          let m = "Using Let";
+          var v = "Using Var";
+          var y = "no var or let used";
+        }
+        return x * 2;
+
+        //console.log("inside fun x = " + x);
+       /// document.getElementById("out").innerText += "inside fun x = " + x;
+
+       //console.log("inside fun y = " + y);
+       // console.log("inside fun v = " + v);
+        //console.log("inside fun m = " + m); //Uncaught ReferenceError: m is not defined
+      }
+      fun();
+      //document.getElementById("out").innerHTML += fun();
+
+      //document.getElementById("out").innerHTML += '<hr>' + fun;
+      var colors = new Array();
+colors[0] = "orange";
+colors[1] = "blue";
+colors[2] = "red";
+colors[3] = "brown";
+colors[6] = "white";
+console.log("Blue: "+ colors[1]);
+ 
+// Updating blue to purple
+colors[1] = "purple";
+console.log("Purple: "+ colors[1]); 
+
+console.log("4: "+ colors[4]);
+console.log("5: "+ colors[5]);  
+console.log("6: "+ colors[6]); 
+console.log("7: "+ colors[7]); 
+
+    </script>
+  </body>
+</html>
