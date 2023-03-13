@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="out">...</div>
+    <script>
+    //JavaScript Classes (ES6)
+      // Declaration
+      class Rectangle {
+        constructor(height, width) {
+          this.height = height;
+          this.width = width;
+        }
+        // Getter
+        get area() {
+          return this.calcArea();
+        }
+        // Method
+        calcArea() {
+          return this.height * this.width;
+        }
+      }
+
+      const r = new Rectangle(5,10);
+      document.getElementById('out').innerHTML = 'Rectangle area: ' + r.area;
+
+      class Square extends Rectangle{
+        constructor(side){
+            super(side,side);
+        }
+      }
+
+      const s = new Square(5);
+      document.getElementById('out').innerHTML += '<br> Square Area: ' + s.area;
+
+ 
+    </script>
+  </body>
+</html>
