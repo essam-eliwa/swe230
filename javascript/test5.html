@@ -10,17 +10,12 @@
     <div id="out"></div>
     <script>
       "use strict";
-      let ar = new Array();
-      ar[10] = 4;
-      document.getElementById("out").innerHTML = ar ;
-      document.getElementById("out").innerHTML += '<br>' + ar[5] ;
 
-      let person = {
-        name:'test',
-        age:21,
+      function displayDate() {
+        document.getElementById("out").innerHTML = Date();
+        console.log(Date());
       }
-      console.log(`${person.age}`);
-      
     </script>
+    <button onclick="displayDate();">Show Date  </button>
   </body>
 </html>

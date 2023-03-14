@@ -31,7 +31,9 @@
         document.getElementById("demo").innerHTML += "<p> Date is:" + Date() + "</p>";
 
         do {
-            document.getElementById("demo").innerHTML += tagStart + number + tagClose + text + endTag + number + endTag;
+            //document.getElementById("demo").innerHTML += tagStart + number + tagClose + text + endTag + number + endTag;
+            let ht = `<h${number}> ${text}</h${number}>`;
+            document.getElementById("demo").innerHTML += ht;
             number += 1;
             if (number > 6) flag = false;
         } while (flag)

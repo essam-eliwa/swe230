@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      canvas {
+        display: block;
+        background: #fff;
+        border: 1px dashed;
+        margin: 5%;
+      }
+      a {
+        display: inline-block;
+        background: #69c;
+        color: #fff;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Paint by holding down the mouse button and moving it.
+      <a href="" download="my_drawing.png">Download my painting</a>
+    </p>
+
+    <canvas width="400" height="400"></canvas>
+
+    <label for="colors"></label>
+    <select name="colors" id="colors">
+        <option value="cyan" selected>Cyan</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+    </select>
+
+    <script src="js/draw.js"></script>
+  </body>
+</html>
