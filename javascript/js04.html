@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript Loop</h2>
+
+    <p id="out"></p>
+<hr>
+    <p id="out2"></p>
+    <script>
+      const cars = ["BMW", "Volvo", "Toyota", "Hyundai"];
+    
+      
+
+      let text = "";
+      for (let i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+      }
+
+      document.getElementById("out").innerHTML = text;
+
+      const car = {
+        model: "Toyota",
+        year: 2022,
+        color: "Gray",
+      };
+
+      let text2 = "";
+      for (let x in car) {
+        text2 += x + ' : ' + car[x] + '<br>';
+      }
+      document.getElementById("out2").innerHTML = text2;
+    </script>
+  </body>
+</html>
