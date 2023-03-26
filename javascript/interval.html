@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class MyTimer {
+        constructor(){
+            this.myInterval = setInterval(this.getDate, 1000);
+            console.log(this.myInterval);
+        }
+
+        start() {
+            console.log(this.myInterval);
+           // if(!this.myInterval){
+                this.myInterval = setInterval(this.getDate, 1000);
+           // }   
+        }
+
+        stop() {
+          clearInterval(this.myInterval);
+        }
+
+        getDate() {
+          const date = new Date();
+          document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+          console.log(date);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>The Window Object</h1>
+    <h2>The setInterval() Method</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      let t = new MyTimer();
+      //let myInterval = setInterval(myTimer, 1000);
+
+      // function myTimer() {
+      //   const date = new Date();
+      //   document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+      // }
+    </script>
+
+    <button onClick="t.stop()">Stop</button>
+    <button onClick="t.start()">Start</button>
+  </body>
+</html>
