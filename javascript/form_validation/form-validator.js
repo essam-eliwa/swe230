@@ -29,6 +29,7 @@ class FormValidator {
     }
   }
   
+  //test
   // Usage example:
   const formElement = document.querySelector('form');
   const formValidator = new FormValidator(formElement);
